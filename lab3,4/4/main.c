@@ -1,15 +1,15 @@
-#include "stdio.h"
+#include <stdio.h>
 
-int main() {
-    int min_value = 1;
-    int max_value = 1000;
+int main (void) {
+    int min_val = 0;
+    int max_val = 1000;
     int num;
-    printf("Input a number:");
-    scanf("%d", &num);
-    int result = min_value <= num && num <= max_value;
-    if (result) {
-        printf("Num %d in range %d to %d: %s", num, min_value, max_value, "yes");
-    } else {
-        printf("Num %d in range %d to %d: %s", num, min_value, max_value, "no");
-    }
+   scanf("%d", &num);
+    printf ("Number %d is inside range %d...%d :  %d  \n", num,
+            min_val, max_val, min_val <= num && num <= max_val);
+
+   int num2;
+   scanf("%d", &num2);
+   int bit = 1 & (num2 << 3);
+   printf("%d", bit);
 }
