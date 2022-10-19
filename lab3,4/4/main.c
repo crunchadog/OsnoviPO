@@ -1,12 +1,11 @@
 #include <stdio.h>
 
 int main (void) {
-    int min_val = 0;
-    int max_val = 1000;
-    int num;
+    int num, max_num, min_num;
    scanf("%d", &num);
-    printf ("Number %d is inside range %d...%d :  %d  \n", num,
-            min_val, max_val, min_val <= num && num <= max_val);
+   max_num = 1000 / num;
+    min_ num = n / 1;
+    printf("\n%d\n", max_num & min_num);
 
    int num2;
    scanf("%d", &num2);
