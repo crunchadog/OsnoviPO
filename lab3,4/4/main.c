@@ -4,7 +4,7 @@ int main (void) {
     int num, max_num, min_num;
    scanf("%d", &num);
    max_num = 1000 / num;
-    min_num = n / 1;
+    min_num = num / 1;
     printf("\n%d\n", max_num & min_num);
 
    int num2;
