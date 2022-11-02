@@ -5,7 +5,7 @@ int main() {
     float *array;
     scanf("%d", &num);
 
-    array = malloc(sizeof(int) * num);
+    array = malloc(sizeof(float) * num);
 
     for (int i = 0; i < num; ++i) {
         scanf("%f", &array[i]);
