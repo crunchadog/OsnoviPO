@@ -43,7 +43,7 @@ int main()
             printf("\n");
         }
     } else
-        printf("Error");
+        printf("net");
 
     return 0;
 }
