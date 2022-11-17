@@ -47,3 +47,62 @@ int main() {
         printf("Off\n");
     }
 }
+
+#include "stdio.h"
+
+#define CARD_READER_ON = 1;
+#define CARD_READER_OFF = 0;
+#define ACTIVE_SD_ON = 1;
+#define ACTIVE_SD_OFF = 0;
+#define ACTIVE_COMPACT_ON = 1;
+#define ACTIVE_COMPACT_OFF = 0;
+#define ACTIVE_MEMORY_FLASH_ON = 1;
+#define ACTIVE_MEMORY_FLASH_OFF = 0;
+
+struct card_reader
+{
+    unsigned short on : 1;
+    unsigned short activeSd : 2;
+    unsigned short activeCompactFlash : 3;
+    unsigned short activeMemoryStick : 4;
+};
+
+void compare(int value) {
+    struct card_reader cardReader;
+    if (value == 1) {
+        cardReader.on CARD_READER_ON
+        printf("On\n");
+    } else {
+        cardReader.on CARD_READER_OFF
+        printf("Off\n");
+    }
+    if (value == 2) {
+        cardReader.activeSd ACTIVE_SD_ON
+        printf("On\n");
+    } else {
+        cardReader.activeSd ACTIVE_SD_OFF
+        printf("Off\n");
+    }
+
+    if (value == 3) {
+        cardReader.activeCompactFlash ACTIVE_COMPACT_ON
+        printf("On\n");
+    } else {
+        cardReader.activeCompactFlash ACTIVE_COMPACT_OFF
+        printf("Off\n");
+    }
+
+    if (value == 4) {
+        cardReader.activeMemoryStick ACTIVE_MEMORY_FLASH_ON
+        printf("On\n");
+    } else {
+        cardReader.activeMemoryStick ACTIVE_MEMORY_FLASH_OFF
+        printf("Off\n");
+    }
+}
+
+int main() {
+    short key;
+    scanf("%d", &key);
+    compare(key);
+}
